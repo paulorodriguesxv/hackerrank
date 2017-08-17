@@ -26,9 +26,20 @@ def getNexPrime(flags, prime):
 
     return nexti
 
-count = 0
-for x in sieveOfEratosthenes(17):
-    print(x)
-    if x: count += 1
+n = 17
+primes = sieveOfEratosthenes(n)
 
-print(count)
+def get_largest_prime(primes, number):
+    for i, x in enumerate(primes):
+        if i < 2: continue
+        if x and  number % i == 0:
+            yield i
+
+prime = 0
+for prime in get_largest_prime(primes, n):
+    pass
+
+print(prime)
+
+
+
