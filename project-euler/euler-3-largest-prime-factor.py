@@ -21,4 +21,6 @@ def get_largest_prime(number):
 t = int(input().strip())
 for a0 in range(t):
     n = int(input().strip())
-    print(max(get_largest_prime(n)))
+    lista = [x for x in get_largest_prime(n)]
+    print(lista)
+    print(max(lista))
