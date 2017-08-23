@@ -61,9 +61,9 @@ class Rectangle(object):
         res = (-m*x + y + m*x1 - y1 == 0) and (dap <= dab) and (dbp <= dab)
 
         if res and False:
-            print dap, dab, dbp
-            print x, y
-            print pointA, pointB
+            print(dap, dab, dbp)
+            print(x, y)
+            print(pointA, pointB)
         return res
 
     def point_inside_polygon(self, x,y,poly):
@@ -102,9 +102,9 @@ class Canvas(object):
 
     def draw(self, circle, rectangle):
 
-        for h in xrange(self.h):
+        for h in range(self.h):
             line = ""
-            for w in xrange(self.w):
+            for w in range(self.w):
                 point = Point(w, h)
                 if circle.calculate(point):
                     line += "#"                
@@ -112,7 +112,7 @@ class Canvas(object):
                     line += "#"
                 else:                
                     line += "."
-            print line
+            print(line)
 
 
 def belongs_pixel(canvas, point):    
@@ -143,4 +143,4 @@ def point_reta(x, y, pointA, pointB):
     return -m*x + y + m*x1 - y1 == 0 
 
 
-print point_reta(7, 15, (8, 14), (12, 10))    
+print(point_reta(7, 15, (8, 14), (12, 10)))    

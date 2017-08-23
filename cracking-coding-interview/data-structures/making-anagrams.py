@@ -30,4 +30,4 @@ for key in lista:
     else:
         diff += max(0, lista[key] - listb[key])
 
-print diff
+print(diff)
